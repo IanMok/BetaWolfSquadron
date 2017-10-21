@@ -1,2 +1,2 @@
 # BetaWolfSquadron
-Assignment
+Group Project
