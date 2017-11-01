@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" name="loginContainer">
  
  <!-- login form; validate each field using regEx onSubmit-->
  <form class="form-horizontal" role="form" name=loginForm onsubmit=return(validateFields());>
