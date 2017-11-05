@@ -16,7 +16,7 @@
 <div class="container" name="content">
 
 <!-- Login and Registration Buttons/Links -->
-<div class="container"
+<div class="container">
 <nav>
     <ul class="nav navbar-nav navbar-right">
 	<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
