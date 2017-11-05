@@ -1,3 +1,26 @@
+html
+{
+	text-align: center;
+	margin: 10px;
+}
+
+body
+{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CAROUSEL */
+
 .carousel-inner img {
       width: 100%; /* Set width to 100% */
       min-height: 200px;
@@ -10,3 +33,10 @@
         display: none;
       }
     }
+	
+
+/* GALLERY */	
+	.thumbnailTitle
+	{
+		text-align: center;
+	}
