@@ -51,7 +51,7 @@
 
 <div class="container">
 <div class="row">
-<
+
 <form class="form-inline" role="form">
 	 <div class="form-group">
       <label class="search">Search Comic Royale:</label>
