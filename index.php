@@ -194,7 +194,7 @@
 
 
 </div>
-</div> <!-- end of latest releases and most popular container ==>
+</div> <!-- end of latest releases and most popular container -->
 
 
 
