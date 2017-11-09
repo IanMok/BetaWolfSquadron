@@ -65,8 +65,7 @@
 
 <!-- Banner with logo -->
 <div class="container">
-<a href="index.php"><img src="Images/logo.jpg"/></a>
-<a href="index.php"><img src="Images/banner.png"/></a>
+<a href="index.php"><img src="Images/logoBanner.png"/></a>
 </div>
 
 <!-- Genre links -->
