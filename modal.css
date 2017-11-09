@@ -1,0 +1,88 @@
+/* image and how it functions when modal box is called */
+#imgTest {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*the background, how clear you want it*/
+#imgTest:hover {opacity: 0.75;}
+
+/*the modal box(background),  */
+.modal { /*class reference*/
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black with opacity */
+}
+
+/* modal box (image) limiting size */
+.modal-content { /*class reference*/
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* caption (the image text) keep same width as image so it doesn't spill out, only used if picture has captions */
+#caption { /*id reference*/
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc; /*very light grey colour*/
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* animation(how it zooms in) */
+.modal-content, #caption { /*class then id references*/
+    -webkit-animation-name: zoom; /*should work with mozilla as well*/
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom; 
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* close button, making it stay at the top right */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/*hovering over it causes it to turn light grey to let user know they are on the CLOSE button*/
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* to function with smaller screens so image is 100% width */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
