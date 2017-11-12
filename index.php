@@ -38,9 +38,9 @@
                             <li class="active"><a href="index.php">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop.php">Shop</a></li>
                             <li><a href="sponsors.html">Sponsors</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
