@@ -6,7 +6,7 @@ var img = document.getElementById('imgTest');
 var modalImg = document.getElementById("archie");
 var captionText = document.getElementById("caption"); //creates a caption for modal.
 
-img.onclick = function ()
+img.onclick = function()
 {
     modal.style.display = "block";
     modalImg.src = this.src;
@@ -17,7 +17,7 @@ img.onclick = function ()
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function ()
+span.onclick = function()
 {
     modal.style.display = "none";
 }
