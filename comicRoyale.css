@@ -1,17 +1,14 @@
-html
-{
-	background-color: #c0c0c0;
+html {
+    background-color: #c0c0c0;
 }
 
-body
-{
-	margin: 25px 100px 25px 100px;
+body {
+    margin: 25px 100px 25px 100px;
 }
 
-footer
-{
-	background-color: black;
-	color: white;
+footer {
+    background-color: black;
+    color: white;
 }
 
 
@@ -23,38 +20,25 @@ footer
 
 
 .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      min-height: 200px;
-	  max-height: 500px;
-    }
+    width: 100%; /* Set width to 100% */
+    min-height: 200px;
+    max-height: 500px;
+}
 
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
-    @media (max-width: 600px) {
-      .carousel-caption {
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
         display: none;
-      }
     }
-	
-
-/* GALLERY PAGE*/	
-.thumbnailTitle
-	{
-		text-align: center;
-	}
-	
-	
-/* ABOUT PAGE */
-.aboutContainer
-{
-	
 }
 
 
+/* GALLERY PAGE*/
+.thumbnailTitle {
+    text-align: center;
+}
 
 
-
-
-
-
-
-
+/* ABOUT PAGE */
+.aboutContainer {
+}

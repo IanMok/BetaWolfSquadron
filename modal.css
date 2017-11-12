@@ -5,8 +5,10 @@
     transition: 0.3s;
 }
 
-/*the background, how clear you want it*/
-#imgTest:hover {opacity: 0.75;}
+    /*the background, how clear you want it*/
+    #imgTest:hover {
+        opacity: 0.75;
+    }
 
 /*the modal box(background),  */
 .modal { /*class reference*/
@@ -47,18 +49,28 @@
 .modal-content, #caption { /*class then id references*/
     -webkit-animation-name: zoom; /*should work with mozilla as well*/
     -webkit-animation-duration: 0.6s;
-    animation-name: zoom; 
+    animation-name: zoom;
     animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
 }
 
 @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* close button, making it stay at the top right */
@@ -72,16 +84,16 @@
     transition: 0.3s;
 }
 
-/*hovering over it causes it to turn light grey to let user know they are on the CLOSE button*/
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
+    /*hovering over it causes it to turn light grey to let user know they are on the CLOSE button*/
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
 /* to function with smaller screens so image is 100% width */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
