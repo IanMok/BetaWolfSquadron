@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="container" name="content">
+    <div class="container">
 
         <!-- Login and Registration Buttons/Links -->
         <div class="row">
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
 
-                <form class="form-inline" role="form">
+                <form class="form-inline">
                     <div class="form-group">
                         <label class="search">Search Comic Royale:</label>
                         <input type="search" class="form-control" id="searchPlaceholder" placeholder="What would you like to look for?">
@@ -62,17 +62,17 @@
         </div><!-- end of Search bar container -->
         <!-- Banner with logo -->
         <div class="container">
-            <a href="index.php"><img src="Images/logoBanner.png" /></a>
+            <a href="index.php"><img src="Images/logoBanner.png" alt="Comic Royale Logo & Banner"/></a>
         </div>
 
         <!-- Genre links -->
 
         <div class="container">
-            <a href="#"><button type="button">Horror</button></a>
-            <a href="#"><button type="button">Action</button></a>
-            <a href="#"><button type="button">Comedy</button></a>
-            <a href="#"><button type="button">Drama</button></a>
-            <a href="#"><button type="button">Sci-Fi</button></a>
+            <button type="button">Horror</button>
+            <button type="button">Action</button>
+            <button type="button">Comedy</button>
+            <button type="button">Drama</button>
+            <button type="button">Sci-Fi</button>
         </div>
 
 
@@ -190,7 +190,8 @@
 
 
             </div>
-        </div> <!-- end of latest releases and most popular container -->
+        </div> 
+        <!-- end of latest releases and most popular container -->
         <!-- Pagination -->
 
         <div class="container">
