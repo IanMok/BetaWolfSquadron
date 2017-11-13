@@ -47,7 +47,9 @@
 </div>
 </div>
 <div class="container">
- 
+ <div class="row">
+ <div class="col-sm-1"></div>
+ <div class="col-sm-7">
  <!-- Registration form; validate each field using regEx onSubmit-->
  <form class="form-horizontal" name=registrationForm onsubmit=return(validateFields());>
     <div class="form-group">
@@ -98,8 +100,9 @@
       </div>
     </div>
  </form>
-  
+  </div>
 </div>
 </div>
+	</div>
 </body>
 </html>
