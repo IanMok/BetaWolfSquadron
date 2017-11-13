@@ -16,7 +16,7 @@
 <body>
 
     <!-- Login and Registration Buttons/Links -->
-    <div class="container" name="content">
+    <div class="container">
         <div class="row">
             <nav>
                 <ul class="nav navbar-nav navbar-right">
@@ -48,7 +48,7 @@
         </div><!-- end of NavBarRow -->
 
 
-        <div class="container" name="aboutContainer">
+        <div class="container">
 
             <h1>COMIC ROYALE SHOP</h1>
 
