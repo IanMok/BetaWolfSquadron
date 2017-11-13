@@ -11,14 +11,12 @@ footer {
     color: white;
 }
 
-
-
-
+h1, h2, h3 {
+    font-family: 'Fontdiner Swanky', Arial, sans-serif;
+}
 
 
 /* CAROUSEL */
-
-
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
     min-height: 200px;
