@@ -12,10 +12,10 @@
 
 <body>
 
-    <div class="container" name="loginContainer">
+    <div class="container">
 
         <!-- login form; validate each field using regEx onSubmit-->
-        <form class="form-horizontal" role="form" name=loginForm onsubmit=return(validateFields());>
+        <form class="form-horizontal" name=loginForm onsubmit=return(validateFields());>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="email">Email:</label>
                 <div class="col-sm-10">
