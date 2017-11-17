@@ -111,8 +111,9 @@ h1, h2, h3 {
     }
 
 /*for the carousel banner*/
-.slider-size {
+#bannerCarousel .slider-size {
     height: 400px; /* slider height */
+    width: 100%;
 }
 
 .Carousel {
