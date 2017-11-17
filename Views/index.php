@@ -28,7 +28,7 @@
       <a class="navbar-brand" href="index.php">Comic Royale</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="index.php">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="shop.html">Shop</a></li>
