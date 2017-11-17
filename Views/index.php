@@ -10,7 +10,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="main">
+
         <!-- Login and Registration Buttons/Links -->
      <div class="container">
 	 <div class="row">
@@ -41,8 +41,10 @@
 	</div>
 	</nav>
 </div>
-</div>
+
         <!-- Search Bar -->
+		
+		<center>
         <div class="container">
             <div class="row">
                 <form class="form-inline">
@@ -71,7 +73,8 @@
         <!-- Carousel -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-8">
+			<div class="col-sm-3"></div>
+                <div class="col-sm-6">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -180,6 +183,8 @@
             <p><a href="#">Site Map </a><a href="#">| Privacy Statement</a></p>
             <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"> 2017 Comic Royale</span></p>
         </footer>
-    </div> <!-- end of .main container -->
+			</center>
+  
+
 </body>
 </html>
