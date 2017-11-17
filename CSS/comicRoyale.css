@@ -15,11 +15,9 @@ h1, h2, h3 {
     font-family: 'Fontdiner Swanky', Arial, sans-serif;
 }
 
-.main
+.navbar-right
 {
-	margin-left: 50px;
 	margin-right: 50px;
-	padding: 20px;
 }
 
 
