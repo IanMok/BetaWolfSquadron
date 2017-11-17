@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 25px 100px 25px 100px;
+	border-radius: 25px;
 }
 
 footer {
