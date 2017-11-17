@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>CR About</title>
+    <title>Contact CR</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 <body>
 <div class="main">
         <!-- Login and Registration Buttons/Links -->
-     <div class="container"> <div class="row">
+      <div class="container"><div class="row">
 <nav>
     <ul class="nav navbar-nav navbar-right">
 	<li><a href="shop.php"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
@@ -57,29 +57,27 @@
             <a href="index.php"><img src="Images/logoBanner.png" alt="Comic Royale Logo & Banner"/></a>
         </div>
 <br>
-<div class="container" >
+<h1>Contact Comic Royale</h1>
 
-<h1>ABOUT COMIC ROYALE</h1>
 
-<div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-	<p>
-	Comic Royale is a Comic Book website where viewers can get a sneak peek and review of the latest release comic books. 
-	The finished project will have a top-level page featuring a prominent CTA, scrolling up to reveal an overview of 
-	categorised comic genres or series separate actionable elements linking to second-level pages. At the bottom of 
-	the page are relevant web forms with validation, with the function of sending an email to a designated address. 
-	Second-level pages for the respective genres contain thumbnails organised in a grid format of each comic book cover.  
-	The actionable element on this page will be the thumbnails, where detailed information including title, synopsis, 
-	cover photo and rating will be displayed in a popup modal on click. The modal can be dismissed, where the user will 
-	return to the thumbnails page. 
-	</p>
-	</div>
-    <div class="col-sm-3"></div>
+<form class="form-horizontal" role="form">
+<a href="admin@comicRoyale.com.au"><h2>Email us here</h2></a>
+
+<h2>or leave a comment below:</h2>
+
+
+<div class="form-group">
+<div class="col-xs-4"></div>
+<div class="col-xs-4">
+      <label for="comment"></label>
+      <textarea class="form-control" rows="5" id="comment" placeholder="Enter your comments here"></textarea>
 </div>
-</div><!-- end of aboutContainer container -->
-</div><!-- end of content container -->
+<div class="col-xs-4"></div>
+</div>
+ <button type="submit" class="btn btn-default">Submit</button>
+ </form>
+ 
+</div><!-- end of contentContainer -->
 
 </body>
-
 </html>
