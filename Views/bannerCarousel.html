@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="comicRoyale.css">
 </head>
 
 
@@ -26,19 +27,32 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!--item can be text or images--><!--active must be on one of the slides or carousel will not show up-->
-                <img src="../Images/banner.png" alt="Index Banner">  <!-- ../  making it up one folder-->
+                <!-- using images but resizing it is a hassle <img src="../Images/banner.png" alt="Index Banner">  <../  making it up one folder-->
+                <div style="background:url(../Images/banner.png) center center background-size:cover;" class="slider-size"><!--changing to background instead of img tag so that resizing is less of a hassle--> 
+                	<div class="carousel-caption">
+                		Comic Royale!
+                	</div>
+                </div>
             </div>
 
             <div class="item">
-                <img src="../Images/marvelCarousel.jpg" alt="Marvel Heroes">
+                <div style="background:url(../Images/marvelCarousel.jpg) center center; background-size:cover;" class="slider-size"><!--changing to background instead of img tag so that resizing is less of a hassle--> 
+                	<div class="carousel-caption">
+                		Marvel Heroes
+                	</div>
+                </div>
             </div>
 
             <div class="item">
-                <img src="../Images/dcBanner.jpg" alt="Dc Heroes">
+                <div style="background:url(../Images/dcBanner.jpg) center center; background-size:cover;" class="slider-size"><!--changing to background instead of img tag so that resizing is less of a hassle--> 
+                	<div class="carousel-caption">
+                		DC Heroes
+                	</div>
+                </div>
             </div>
         </div>
 
-        <!-- arrows on carousel -->
+        <!-- arrows on banner carousel -->
         <a class="left carousel-control" href="#bannerCarousel" data-slide="prev"> <!--'class left carousel-control' puts the arrows within the images--> 
             <!--clicking on left arrow goes to previous slide-->
             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -50,3 +64,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+     <!-- Bootstrap core JavaScript-->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+ 	</body>
+ </html>
