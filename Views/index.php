@@ -62,13 +62,113 @@
         </div>
 <br>
         <!-- Genre links -->
-        <div class="container">
-            <button type="button">Horror</button>
-            <button type="button">Action</button>
-            <button type="button">Comedy</button>
-            <button type="button">Drama</button>
-            <button type="button">Sci-Fi</button>
+        <!-- Genre links -->
+		<div class="container">
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#horrorModal">Horror</button>
+  <!-- Modal -->
+  <div class="modal fade" id="horrorModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Horror Comics</h4>
         </div>
+        <div class="modal-body">
+        <p>Goosebumps</p>
+		<p>Tales from the Crypt</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#actionModal">Action</button>
+  <!-- Modal -->
+  <div class="modal fade" id="actionModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Action Comics</h4>
+        </div>
+        <div class="modal-body">
+          <p>Marvel</p>
+          <p>Avengers</p>
+</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#comedyModal">Comedy</button>
+  <!-- Modal -->
+  <div class="modal fade" id="comedyModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Comedy Comics</h4>
+        </div>
+        <div class="modal-body">
+          <p>Archie</p>
+          <p>Popeye</p>
+          <p>Mad Magazine</p>
+</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#sciFiModal">Sci-Fi</button>
+  <!-- Modal -->
+  <div class="modal fade" id="sciFiModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sci-Fi Comics</h4>
+        </div>
+        <div class="modal-body">
+          <p>Star Wars</p>
+       </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#heroModal">Hero</button>
+  <!-- Modal -->
+  <div class="modal fade" id="heroModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Superhero Comics</h4>
+        </div>
+        <div class="modal-body">
+          <p>Silver Surfer</p>
+          <p>Thor</p>
+          <p>Iron Man</p>
+          <p>Wolverine</p>
+          <p>The Hulk</p>
+          <p>The Phantom</p>
+</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 <br>
         <!-- Carousel -->
         <div class="container">
