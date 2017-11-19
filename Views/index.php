@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-           <link rel="stylesheet" href="comicRoyale.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="comicRoyale.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -14,15 +14,15 @@
         <!-- Login and Registration Buttons/Links -->
      <div class="container">
 	 <div class="row">
-<nav>
-    <ul class="nav navbar-nav navbar-right">
-	<li><a href="shop.php"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
-	<li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-</nav>
-</div>
-</div>
+		<nav>
+ 			<ul class="nav navbar-nav navbar-right">
+			<li><a href="shop.php"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
+			<li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    			</ul>
+		</nav>
+	</div>
+	</div>
 <!-- NavBar -->	
 <div class="container">
 <nav class="navbar">
@@ -280,11 +280,9 @@
 <br>
         <!-- Footer -->
         <footer>
-            <p><a href="#">Site Map </a><a href="#">| Privacy Statement</a></p>
+            <p><a href="siteMap.html">Site Map </a><a href="privacy.html">| Privacy Statement</a></p>
             <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"> 2017 Comic Royale</span></p>
         </footer>
-			</center>
-  
-
+	</center>
 </body>
 </html>
