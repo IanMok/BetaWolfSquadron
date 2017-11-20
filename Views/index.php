@@ -247,8 +247,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                </div>
-                <hr>
+		    </div>
             </div>
         </div>
 <br>
