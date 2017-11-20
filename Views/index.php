@@ -251,19 +251,46 @@
             </div>
         </div>
 <br>
-        <!-- Table of Latest Releases and Most Popular -->
+              <!-- Table of Latest Releases and Most Popular -->
         <div class="container">
-            <div class="row">
-                <div class="sm-col-2"></div>
-                <!-- Latest Releases -->
-                <div class="sm-col-5">
+    
                     <h2>Latest Releases</h2>
                     <p>A list of Latest Releases and Most Popular to be coming soon.</p>
+					<p>An example of how the table will look. Dynamicness and Interactivity an extended feature.</p>
                 </div>
+				
+	<div class="container">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-8">
+	<table class="table table-striped table-bordered table-condensed">
+    <thead>
+      <tr>
+       
+        <th>Released</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>7 hours ago</td>
+        <td>The Avengers</td>
+      </tr>
+      <tr>
+       
+        <td>17th October 2017</td>
+        <td>Popeye</td>
+      </tr>
+      <tr>
+      
+        <td>16th October 2017</td>
+        <td>Batman</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
                 <!-- Most Popular -->
-            </div>
-        </div> 
-        <!-- end of latest releases and most popular container -->
     <br>
     <!-- Pagination -->
         <div class="container">
