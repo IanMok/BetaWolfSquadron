@@ -17,9 +17,16 @@ $(function() {
         $(this).addClass('active');
         e.preventDefault();
     });
-    $('.multiple-items').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
+    $('.modal').on('shown.bs.modal', function() {
+        $('.modal-body').css('padding', '0px');
+        $('.modal-body').css('margin', '0px');
+        $('.modal-dialog').css({
+            position: 'relative',
+            display: 'table',
+            'overflow-y': 'auto',
+            'overflow-x': 'auto',
+            width: 'auto',
+            'min-width': '10px'
+        });
     });
 });
