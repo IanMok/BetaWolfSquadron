@@ -98,9 +98,11 @@
                                             <div class="form-group">
                                                 <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                             </div>
+                                            <div class="alert alert-danger" hidden id="login_username_isempty">Username can't not be empty</div>
                                             <div class="form-group">
                                                 <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                             </div>
+                                            <div class="alert alert-danger" hidden id="login_password_isempty">Password can't not be empty</div>
                                             <div class="form-group text-center">
                                                 <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
                                                 <label for="remember"> Remember Me</label>
@@ -124,17 +126,23 @@
                                         </form>
                                         <form id="register-form" action="#" method="post" role="form" style="display: none;">
                                             <div class="form-group">
-                                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                                <input type="text" name="username" id="register_username" tabindex="1" class="form-control" placeholder="Username" value="">
                                             </div>
+                                            <div class="alert alert-danger" hidden id="username_isempty">Please enter username</div>
                                             <div class="form-group">
-                                                <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                                                <input type="email" name="email" id="register_email" tabindex="1" class="form-control" placeholder="Email Address" value="">
                                             </div>
+                                            <div class="alert alert-danger" hidden id="email_validation">Invalid Email</div>
+                                            <div class="alert alert-danger" hidden id="email_isempty">Please enter email</div>
                                             <div class="form-group">
-                                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                                <input type="password" name="password" id="register_password" tabindex="2" class="form-control" placeholder="Password">
                                             </div>
+                                            <div class="alert alert-danger" hidden id="password_isempty">Please enter password</div>
                                             <div class="form-group">
-                                                <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                                                <input type="password" name="confirm-password" id="register_confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                                             </div>
+                                            <div class="alert alert-danger" hidden id="password_confirm_isempty">Please enter password again</div>
+                                            <div class="alert alert-danger" hidden id="password_validation">passwords don't match</div>
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-sm-6 col-sm-offset-3">
@@ -236,6 +244,91 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
             <script src="./js/main.js"></script>
+            <script>
+                // $('#register_username').on('change keyup paste', () => {
+                //     console.log(`Value: ${$('#register_username').val()}`)
+                // })
+                $('#register-form').on('submit', function (e) {
+                    e.preventDefault();
+                    //Retrive uses inputs
+                    let username = $('#register_username').val();
+                    let email = $('#register_email').val();
+                    let password = $('#register_password').val();
+                    let confirm_password = $('#register_confirm-password').val();
+                    // console.log(`Username: ${username}\nEmail: ${email}\nPassword: ${password}\nConfirm password: ${confirm_password}`)
+                    if (username === "") {
+                        $('#username_isempty').show()
+                    } else {
+                        $('#username_isempty').hide()
+                    }
+                    if (email === "") {
+                        $('#email_isempty').show()
+                    } else {
+                        $('#email_isempty').hide()
+                    }
+                    if (password === "") {
+                        $('#password_isempty').show();
+                    } else {
+                        $('#password_isempty').hide();
+                    }
+                    if (confirm_password === "") {
+                        $('#password_confirm_isempty').show();
+                    } else {
+                        $('#password_confirm_isempty').hide();
+                    }
+                    if (email !== "") {  // If something was entered
+                        if (!isValidEmailAddress(email)) {
+                            $('#email_validation').show(); //error message
+                            $("#email").focus();   //focus on email field
+                        } else {
+                            $('#email_validation').hide();
+                        }
+                    }
+                    if (password !== confirm_password) {
+                        $('#password_validation').show()
+                    } else {
+                        $('#password_validation').hide()
+
+                    }
+                    if (
+                        !$('#password_validation').is(":visible") &&
+                        !$('#email_validation').is(":visible") &&
+                        !$('#password_confirm_isempty').is(":visible") &&
+                        !$('#password_isempty').is(":visible") &&
+                        !$('#email_isempty').is(":visible") &&
+                        !$('#username_isempty').is(":visible")
+                    ) {
+                        window.location.href = 'index.html';
+                    }
+
+                })
+
+                function isValidEmailAddress(emailAddress) {
+                    var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
+                    return pattern.test(emailAddress);
+                };
+
+                $('#login-form').on('submit', (e) => {
+                    e.preventDefault()
+                    let username = $('#username').val();
+                    let password = $('input#password').val();
+                    console.log(`Username: ${username}\nPassword: ${password}`)
+                    if (username === '') {
+                        $('#login_username_isempty').show()
+                    } else {
+                        $('#login_username_isempty').hide()
+                    }
+                    if (password === '') {
+                        $('#login_password_isempty').show()
+                    } else {
+                        $('#login_password_isempty').hide()
+                    }
+                    // console.log('test', $('#login_username_isempty').is(":visible"))
+                    if (!$('#login_username_isempty').is(":visible") && !$('#login_password_isempty').is(":visible")) {
+                        window.location.href = 'index.html';
+                    }
+                })
+            </script>
 </body>
 
 </html>
