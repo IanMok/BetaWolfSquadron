@@ -41,14 +41,15 @@
                             <a href="contact.html">Contact Us</a>
                         </li>
                         <li id='searchbar'>
-                            <div class="input-group">
+                            <!-- <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Google Search for...">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
-                            </div>
+                            </div> -->
+                            <gcse:searchbox></gcse:searchbox>
                         </li>
                         <li class="navbar-right">
                             <a href="shop.html">
@@ -68,6 +69,7 @@
             </nav>
         </div>
     </div>
+    <gcse:searchresults></gcse:searchresults>
     <footer class="footer-bs">
         <div class="row">
             <div class="col-md-3 footer-brand animated fadeInLeft">
@@ -131,18 +133,18 @@
             </div>
             <div class="col-md-3 footer-ns animated fadeInRight">
                 <h4>Newsletter</h4>
-                <p>Subscribe for the latest news!</p>
-                <form action="" method="post">
-                    <div class="input-prepend">
-                        <span class="add-on">
-                            <i class="icon-envelope"></i>
+                <p>Subscribed for newest news!</p>
+                <p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                            </button>
                         </span>
-                        <input type="text" id="" name="" placeholder="your@email.com">
                     </div>
-                    <br />
-                    <input type="submit" value="Subscribe Now!" class="btn btn-default" />
-                </form>
-                <!-- /input-group -->
+                    <!-- /input-group -->
+                </p>
             </div>
         </div>
     </footer>
@@ -151,7 +153,16 @@
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="./js/main.js"></script>
-
+<script>
+    // Make sure in jsFiddle you have selected option onLoad.
+    (function () {
+        var cx = '017643444788069204610:4gvhea_mvga'; // Insert your own Custom Search Engine ID here
+        var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+        gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+    })();
+</script>
 
 </body>
 
