@@ -9,9 +9,21 @@
     <meta name="author" content="Login">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-
+    <!--google search-->
+    <script>
+        (function () {
+            var cx = '008751495031039905891:e0l3ljamk6k';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+   
 </head>
-</body>
+<body>
 <!-- Nav bar and search -->
 <div class="container">
     <div class="navbar_color">
@@ -42,12 +54,8 @@
                         </li>
                         <li id='searchbar'>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
+                                <!--google search bar-->
+                                <gcse:search></gcse:search>
                             </div>
                         </li>
                         <li class="navbar-right">
