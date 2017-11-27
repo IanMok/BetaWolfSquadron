@@ -1,5 +1,5 @@
-$(function() {
-    $('#login-form-link').click(function(e) {
+$(function () {
+    $('#login-form-link').click(function (e) {
         $('#login-form')
             .delay(100)
             .fadeIn(100);
@@ -8,7 +8,7 @@ $(function() {
         $(this).addClass('active');
         e.preventDefault();
     });
-    $('#register-form-link').click(function(e) {
+    $('#register-form-link').click(function (e) {
         $('#register-form')
             .delay(100)
             .fadeIn(100);
@@ -17,7 +17,7 @@ $(function() {
         $(this).addClass('active');
         e.preventDefault();
     });
-    $('.modal').on('shown.bs.modal', function() {
+    $('.modal').on('shown.bs.modal', function () {
         $('.modal-body').css('padding', '0px');
         $('.modal-body').css('margin', '0px');
         $('.modal-dialog').css({
@@ -30,3 +30,14 @@ $(function() {
         });
     });
 });
+
+//google search function
+(function () {
+    var cx = '008751495031039905891:e0l3ljamk6k';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+})();
