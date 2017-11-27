@@ -21,601 +21,602 @@
         })();
     </script>
 </head>
+
 <body>
-<!-- Nav bar and search -->
-<div class="container">
-    <div class="navbar_color">
-        <div class="row ">
-            <nav class="navbar">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">Comic Royale</a>
+    <!-- Nav bar and search -->
+    <div class="container">
+        <div class="navbar_color">
+            <div class="row ">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html">Comic Royale</a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="shop.html">Shop</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html">Sponsors</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+                            <li id='searchbar'>
+                                <div class="input-group">
+                                    <gcse:search></gcse:search>
+                                </div>
+                            </li>
+                            <li class="navbar-right">
+                                <a href="shop.html">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Shop
+                                </a>
+                            </li>
+                            <li class="navbar-right">
+                                <a href="login.html">
+                                    <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                            </li>
+                            <li class="navbar-right">
+                                <a href="login.html">
+                                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="active">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="shop.html">Shop</a>
-                        </li>
-                        <li>
-                            <a href="sponsors.html">Sponsors</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact Us</a>
-                        </li>
-                        <li id='searchbar'>
-                            <div class="input-group">
-                                <gcse:search class="form-control"></gcse:search>
+                </nav>
+            </div>
+        </div>
+        <!-- Body -->
+        <!-- Carousel for image clickable -->
+        <!--using bootstrap/ doesn't work well with internet explorer 9 and earlier-->
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+            <!--class caoursel specifies this div has a carousel, slide adds a CSS transition effect which makes the new item slide(can be omitted)-->
+            <!--data-ride carousel tells bootstrap to begin animation of carousel when page loads-->
+            <!-- Indicators (little dots on the bottom of carousel indicating how many slides are in the carousel and which slide the user is viewing, user can click to transition) -->
+            <ol class="carousel-indicators">
+                <!--ordered list for indicators-->
+                <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+                <!--data-target points to id of carousel-->
+                <!--data-slide-to specifies which slide when clicking on the dot, clicking first dot goes to array 0, dot 2 goes to array 2-->
+                <li data-target="#bannerCarousel" data-slide-to="1"></li>
+                <li data-target="#bannerCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!--item can be text or images-->
+                    <!--active must be on one of the slides or carousel will not show up-->
+                    <!-- using images but resizing it is a hassle <img src="../Images/banner.png" alt="Index Banner">  <../  making it up one folder-->
+                    <div style="background:url(../Images/banner.png) center center; background-size:cover;" class="slider-size">
+                        <!--changing to background instead of img tag so that resizing is less of a hassle-->
+                        <div class="carousel-caption">
+                            Comic Royale!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div style="background:url(../Images/marvelCarousel.jpg) center center; background-size:cover;" class="slider-size">
+                        <!--changing to background instead of img tag so that resizing is less of a hassle-->
+                        <div class="carousel-caption">
+                            Marvel Heroes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div style="background:url(../Images/dcBanner.jpg) center center; background-size:cover;" class="slider-size">
+                        <!--changing to background instead of img tag so that resizing is less of a hassle-->
+                        <div class="carousel-caption">
+                            DC Heroes
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- arrows on banner carousel -->
+            <a class="left carousel-control" href="javascript:void(0)" data-slide="prev" data-target="#bannerCarousel">
+                <!--'class left carousel-control' puts the arrows within the images-->
+                <!--clicking on left arrow goes to previous slide-->
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="javascript:void(0)" data-slide="next" data-target="#bannerCarousel">
+                <!--'class right carousel-control' puts the arrows within the images-->
+                <!--clicking on right arrow goes to next slide-->
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Another Carousel with clickable image -->
+        <!-- Group of Menu tab -->
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Action</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Manga</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Marvel</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">DC</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Others</button>
+            </div>
+        </div>
+        <!-- Group of Item  -->
+
+        <div class="carousel slide" id="myCarousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#captainAmerica">
+                                        <img src="../images/captainAmerica.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Captain America</h4>
+                                </div>
                             </div>
                         </li>
-                        <li class="navbar-right">
-                            <a href="shop.html">
-                                <span class="glyphicon glyphicon-shopping-cart"></span> Shop
-                            </a>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#archie">
+                                        <img src="../images/archie.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Archie</h4>
+                                </div>
+                            </div>
                         </li>
-                        <li class="navbar-right">
-                            <a href="login.html">
-                                <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#avengers">
+                                        <img src="../images/avengers.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Avengers</h4>
+                                </div>
+                            </div>
                         </li>
-                        <li class="navbar-right">
-                            <a href="login.html">
-                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#gooseBumps">
+                                        <img src="../images/gooseBumps.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Goosebumps</h4>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Body -->
-    <!-- Carousel for image clickable -->
-    <!--using bootstrap/ doesn't work well with internet explorer 9 and earlier-->
-    <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
-        <!--class caoursel specifies this div has a carousel, slide adds a CSS transition effect which makes the new item slide(can be omitted)-->
-        <!--data-ride carousel tells bootstrap to begin animation of carousel when page loads-->
-        <!-- Indicators (little dots on the bottom of carousel indicating how many slides are in the carousel and which slide the user is viewing, user can click to transition) -->
-        <ol class="carousel-indicators">
-            <!--ordered list for indicators-->
-            <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
-            <!--data-target points to id of carousel-->
-            <!--data-slide-to specifies which slide when clicking on the dot, clicking first dot goes to array 0, dot 2 goes to array 2-->
-            <li data-target="#bannerCarousel" data-slide-to="1"></li>
-            <li data-target="#bannerCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!--item can be text or images-->
-                <!--active must be on one of the slides or carousel will not show up-->
-                <!-- using images but resizing it is a hassle <img src="../Images/banner.png" alt="Index Banner">  <../  making it up one folder-->
-                <div style="background:url(../Images/banner.png) center center; background-size:cover;" class="slider-size">
-                    <!--changing to background instead of img tag so that resizing is less of a hassle-->
-                    <div class="carousel-caption">
-                        Comic Royale!
-                    </div>
+                <!-- /Slide1 -->
+                <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#ironMan">
+                                        <img src="../images/ironMan.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Iron Man</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail" data-toggle="modal" data-target="#popeye">
+                                    <a href="#">
+                                        <img src="../images/popeye.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Popeye</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#silverSurfer">
+                                        <img src="../images/silverSurfer.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Silver Surfer</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail" data-toggle="modal" data-target="#starWars">
+                                    <a href="#">
+                                        <img src="../images/starWars.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Star Wars</h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <!-- /Slide2 -->
+                <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#talesFromTheCrypt">
+                                        <img src="../images/talesFromTheCrypt.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Tales From the Crypt</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail" data-toggle="modal" data-target="#wolverine">
+                                    <a href="#">
+                                        <img src="../images/wolverine.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Wolverine</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#madMagazine">
+                                        <img src="../images/madMagazine.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Mad Magazine</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+                            <div class="fff">
+                                <div class="thumbnail">
+                                    <a href="#" data-toggle="modal" data-target="#marvel">
+                                        <img src="../images/marvel.jpg" style="width:360px;height:240px" alt="">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Marvel</h4>
+                                </div>
+                            </div>
+                        </li>
 
-            <div class="item">
-                <div style="background:url(../Images/marvelCarousel.jpg) center center; background-size:cover;" class="slider-size">
-                    <!--changing to background instead of img tag so that resizing is less of a hassle-->
-                    <div class="carousel-caption">
-                        Marvel Heroes
-                    </div>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="item">
-                <div style="background:url(../Images/dcBanner.jpg) center center; background-size:cover;" class="slider-size">
-                    <!--changing to background instead of img tag so that resizing is less of a hassle-->
-                    <div class="carousel-caption">
-                        DC Heroes
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- arrows on banner carousel -->
-        <a class="left carousel-control" href="javascript:void(0)" data-slide="prev" data-target="#bannerCarousel">
-            <!--'class left carousel-control' puts the arrows within the images-->
-            <!--clicking on left arrow goes to previous slide-->
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="javascript:void(0)" data-slide="next" data-target="#bannerCarousel">
-            <!--'class right carousel-control' puts the arrows within the images-->
-            <!--clicking on right arrow goes to next slide-->
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!-- Another Carousel with clickable image -->
-    <!-- Group of Menu tab -->
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Action</button>
-        </div>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Manga</button>
-        </div>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Marvel</button>
-        </div>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">DC</button>
-        </div>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Others</button>
-        </div>
-    </div>
-    <!-- Group of Item  -->
-
-    <div class="carousel slide" id="myCarousel">
-        <div class="carousel-inner">
-            <div class="item active">
-                <ul class="thumbnails">
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#captainAmerica">
-                                    <img src="../images/captainAmerica.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Captain America</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#archie">
-                                    <img src="../images/archie.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Archie</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#avengers">
-                                    <img src="../images/avengers.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Avengers</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#gooseBumps">
-                                    <img src="../images/gooseBumps.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Goosebumps</h4>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- /Slide1 -->
-            <div class="item">
-                <ul class="thumbnails">
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#ironMan">
-                                    <img src="../images/ironMan.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Iron Man</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail" data-toggle="modal" data-target="#popeye">
-                                <a href="#">
-                                    <img src="../images/popeye.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Popeye</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#silverSurfer">
-                                    <img src="../images/silverSurfer.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Silver Surfer</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail" data-toggle="modal" data-target="#starWars">
-                                <a href="#">
-                                    <img src="../images/starWars.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Star Wars</h4>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- /Slide2 -->
-            <div class="item">
-                <ul class="thumbnails">
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#talesFromTheCrypt">
-                                    <img src="../images/talesFromTheCrypt.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Tales From the Crypt</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail" data-toggle="modal" data-target="#wolverine">
-                                <a href="#">
-                                    <img src="../images/wolverine.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Wolverine</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#madMagazine">
-                                    <img src="../images/madMagazine.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Mad Magazine</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-sm-3">
-                        <div class="fff">
-                            <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#marvel">
-                                    <img src="../images/marvel.jpg" style="width:360px;height:240px" alt="">
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <h4>Marvel</h4>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
 
 
-            <nav>
-                <ul class="control-box pager">
-                    <li>
-                        <a data-slide="prev" href="#myCarousel" class="">
-                            <i class="glyphicon glyphicon-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-slide="next" href="#myCarousel" class="">
-                            <i class="glyphicon glyphicon-chevron-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- /.control-box -->
-        </div>
-    </div>
-    <!-- Model box Sample here -->
-    <div class="modal fade" id="captainAmerica" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/captainAmerica.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="archie" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/archie.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="avengers" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/avengers.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="gooseBumps" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/gooseBumps.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="ironMan" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/ironMan.jpg" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="marvel" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/marvel.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="popeye" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/popeye.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="silverSurfer" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/silverSurfer.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="starWars" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/starWars.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="telesFromTheCrypt" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/talesFromTheCrypt.jpg" />
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="wolverine" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="../images/wolverine.jpg" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /#myCarousel -->
-    <!-- Pagaintion and top items list -->
-    <div class="item row ">
-
-        <div class="col-xs-12 col-sm-9">
-
-            <div class="jumbotron jumbotron-fluid">
-                <h1>Latest Chapters</h1>
-                <p>All new comics chapter will be up to date!</p>
-                <div>
-                    <h4>7 hours ago</h3>
-                        <p>
-                            <strong>The Avangers</strong>
-                        </p>
-                </div>
-                <div>
-                    <h4>2 days ago</h3>
-                        <p>
-                            <strong>Captain American</strong>
-                        </p>
-                </div>
-                <div>
-                    <h4>1 weeks ago</h3>
-                        <p>
-                            <strong>Spiderman</strong>
-                        </p>
-                </div>
-                <div>
-                    <h4>1 weeks ago</h3>
-                        <p>
-                            <strong>popoye</strong>
-                        </p>
-                </div>
                 <nav>
-                    <ul class="pagination">
+                    <ul class="control-box pager">
                         <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
+                            <a data-slide="prev" href="#myCarousel" class="">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li>
-                            <a href="#">4</a>
-                        </li>
-                        <li>
-                            <a href="#">5</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
+                            <a data-slide="next" href="#myCarousel" class="">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
                             </a>
                         </li>
                     </ul>
                 </nav>
-            </div>
-
-        </div>
-        <!--/.col-xs-12.col-sm-9-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group" id="ajax_list">
-                <button id="ajax_call" class="list-group-item active">Top Sale Comics</button>
+                <!-- /.control-box -->
             </div>
         </div>
-        <!--/.sidebar-offcanvas-->
-    </div>
-    <!--/row-->
-    <!----------- Footer ------------>
-    <footer class="footer-bs">
-        <div class="row">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-                <image src="../images/logo.jpg" style="width: 99px; height: 99px" />
-                <p>Comic Royal Inc, All rights reserved</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Genre —</h4>
-                <div class="col-md-6">
-                    <ul class="pages">
-                        <li>
-                            <a href="#">Action</a>
-                        </li>
-                        <li>
-                            <a href="#">Comedy</a>
-                        </li>
-                        <li>
-                            <a href="#">Drama</a>
-                        </li>
-                        <li>
-                            <a href="#">Sci-Fi</a>
-                        </li>
-                        <li>
-                            <a href="#">Horror</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li>
-                            <a href="about.html">About Us</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contacts</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Terms & Condition</a>
-                        </li>
-                        <li>
-                            <a href="sponsors.html">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li>
-                        <a href="#">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="#">RSS</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3 footer-ns animated fadeInRight">
-                <h4>Newsletter</h4>
-                <p>Subscribe for the latest news!</p>
-                <form action="" method="post">
-                    <div class="input-prepend">
-                        <span class="add-on">
-                            <i class="icon-envelope"></i>
-                        </span>
-                        <input type="text" id="" name="" placeholder="your@email.com">
+        <!-- Model box Sample here -->
+        <div class="modal fade" id="captainAmerica" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/captainAmerica.jpg" />
                     </div>
-                    <br />
-                    <input type="submit" value="Subscribe Now!" class="btn btn-default" />
-                </form>
-                <!-- /input-group -->
+                </div>
+
             </div>
         </div>
-    </footer>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="./js/main.js"></script>
-<script>
-    $('#ajax_call').on('click', function () {
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                for (let i = 0; i < data.top.length; i++) {
-                    $('#ajax_list').append('<a class="list-group-item">' + data.top[i] + '</a>')
-                }
-            })
-    })
-</script>
+        <div class="modal fade" id="archie" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/archie.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="avengers" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/avengers.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="gooseBumps" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/gooseBumps.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="ironMan" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/ironMan.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="marvel" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/marvel.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="popeye" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/popeye.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="silverSurfer" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/silverSurfer.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="starWars" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/starWars.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="telesFromTheCrypt" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/talesFromTheCrypt.jpg" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="wolverine" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="../images/wolverine.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#myCarousel -->
+        <!-- Pagaintion and top items list -->
+        <div class="item row ">
+
+            <div class="col-xs-12 col-sm-9">
+
+                <div class="jumbotron jumbotron-fluid">
+                    <h1>Latest Chapters</h1>
+                    <p>All new comics chapter will be up to date!</p>
+                    <div>
+                        <h4>7 hours ago</h3>
+                            <p>
+                                <strong>The Avangers</strong>
+                            </p>
+                    </div>
+                    <div>
+                        <h4>2 days ago</h3>
+                            <p>
+                                <strong>Captain American</strong>
+                            </p>
+                    </div>
+                    <div>
+                        <h4>1 weeks ago</h3>
+                            <p>
+                                <strong>Spiderman</strong>
+                            </p>
+                    </div>
+                    <div>
+                        <h4>1 weeks ago</h3>
+                            <p>
+                                <strong>popoye</strong>
+                            </p>
+                    </div>
+                    <nav>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!--/.col-xs-12.col-sm-9-->
+
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                <div class="list-group" id="ajax_list">
+                    <button id="ajax_call" class="list-group-item active">Top Sale Comics</button>
+                </div>
+            </div>
+            <!--/.sidebar-offcanvas-->
+        </div>
+        <!--/row-->
+        <!----------- Footer ------------>
+        <footer class="footer-bs">
+            <div class="row">
+                <div class="col-md-3 footer-brand animated fadeInLeft">
+                    <image src="../images/logo.jpg" style="width: 99px; height: 99px" />
+                    <p>Comic Royal Inc, All rights reserved</p>
+                </div>
+                <div class="col-md-4 footer-nav animated fadeInUp">
+                    <h4>Genre —</h4>
+                    <div class="col-md-6">
+                        <ul class="pages">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Comedy</a>
+                            </li>
+                            <li>
+                                <a href="#">Drama</a>
+                            </li>
+                            <li>
+                                <a href="#">Sci-Fi</a>
+                            </li>
+                            <li>
+                                <a href="#">Horror</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list">
+                            <li>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Terms & Condition</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-social animated fadeInDown">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#">RSS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-ns animated fadeInRight">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest news!</p>
+                    <form action="" method="post">
+                        <div class="input-prepend">
+                            <span class="add-on">
+                                <i class="icon-envelope"></i>
+                            </span>
+                            <input type="text" id="" name="" placeholder="your@email.com">
+                        </div>
+                        <br />
+                        <input type="submit" value="Subscribe Now!" class="btn btn-default" />
+                    </form>
+                    <!-- /input-group -->
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        $('#ajax_call').on('click', function () {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    for (let i = 0; i < data.top.length; i++) {
+                        $('#ajax_list').append('<a class="list-group-item">' + data.top[i] + '</a>')
+                    }
+                })
+        })
+    </script>
 
 </body>
 
