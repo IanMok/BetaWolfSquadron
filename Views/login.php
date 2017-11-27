@@ -10,17 +10,21 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="main">
-        <!-- Login and Registration Buttons/Links -->
-     <div class="container"> <div class="row">
+
+      <!-- Login and Registration Buttons/Links -->
+     <div class="container">
+	 <div class="row">
+	 <div class="container">
 <nav>
     <ul class="nav navbar-nav navbar-right">
 	<li><a href="shop.php"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
 	<li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 	<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
-</nav></div>
+</nav>
 </div>
+
+
 <!-- NavBar -->	
 <div class="container">
 <nav class="navbar">
@@ -39,8 +43,13 @@
 	</div>
 	</nav>
 </div>
+
 </div>
+</div>
+
         <!-- Search Bar -->
+		
+		<center>
         <div class="container">
             <div class="row">
                 <form class="form-inline">
@@ -59,7 +68,11 @@
 <br>
 
    <!-- login form; validate each field using regEx onSubmit-->
-        <form class="form-horizontal" name=loginForm onsubmit=return(validateFields());>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+	   <form class="form-horizontal" name=loginForm onsubmit=return(validateFields());>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="email">Email:</label>
                 <div class="col-sm-10">
@@ -88,8 +101,30 @@
                 </div>
             </div>
         </form>
-
-    </div>
-
+		</div>
+		</div>
+		</div>
+<br>
+<br>
+    <!-- Pagination -->
+        <div class="container">
+            <ul class="pagination">
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+            </ul>
+        </div>
+<br>
+<!-- Footer -->
+        <footer>
+            <p><a href="siteMap.html">Site Map </a>
+			<a href="privacy.html">| Privacy Statement</a></p>
+            <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"> 2017 Comic Royale</span></p>
+        </footer>
+   
+</center>
 </body>
 </html>
