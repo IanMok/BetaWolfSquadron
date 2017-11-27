@@ -328,6 +328,6 @@ body register {
 
 #searchbar {
     width: 200px;
-    margin-top: 8px;
-    margin-right: 5px;
+    margin-top: 0px;
+    margin-right: 0px;
 }
