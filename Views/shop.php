@@ -10,12 +10,10 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="main">
-        <!-- Login and Registration Buttons/Links -->
-      <div class="container">
-	
-
-<div class="row">
+         <!-- Login and Registration Buttons/Links -->
+     <div class="container">
+	 <div class="row">
+	 <div class="container">
 <nav>
     <ul class="nav navbar-nav navbar-right">
 	<li><a href="shop.php"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
@@ -24,7 +22,8 @@
     </ul>
 </nav>
 </div>
-</div>
+
+
 <!-- NavBar -->	
 <div class="container">
 <nav class="navbar">
@@ -43,7 +42,10 @@
 	</div>
 	</nav>
 </div>
+
 </div>
+</div>
+		<center>
         <!-- Search Bar -->
         <div class="container">
             <div class="row">
@@ -62,9 +64,7 @@
         </div>
 <br>
 <div class="container" >
-
 <h1>COMIC ROYALE SHOP</h1>
-
 <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
@@ -72,9 +72,28 @@
 	</div>
     <div class="col-sm-3"></div>
 </div>
-</div><!-- end of shopContainer container -->
+
 </div><!-- end of content container -->
-
+<br>
+<br>
+    <!-- Pagination -->
+        <div class="container">
+            <ul class="pagination">
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+            </ul>
+        </div>
+<br>
+<!-- Footer -->
+        <footer>
+            <p><a href="siteMap.html">Site Map </a>
+			<a href="privacy.html">| Privacy Statement</a></p>
+            <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"> 2017 Comic Royale</span></p>
+        </footer>
+</center>
 </body>
-
 </html>
